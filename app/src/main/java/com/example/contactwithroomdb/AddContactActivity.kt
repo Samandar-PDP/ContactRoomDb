@@ -18,6 +18,7 @@ class AddContactActivity : AppCompatActivity() {
         binding.btnSave.setOnClickListener {
             val name = binding.editName.text.toString().trim()
             val lastName = binding.editLastName.text.toString().trim()
+
             val number = binding.editNumber.text.toString().trim()
             val address = binding.editLocation.text.toString().trim()
             if (name.isNotEmpty() && address.isNotEmpty()) {
