@@ -1,8 +1,10 @@
-package com.example.contactwithroomdb
+package com.example.contactwithroomdb.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.contactwithroomdb.R
 import com.example.contactwithroomdb.database.ContactDatabase
 import com.example.contactwithroomdb.databinding.ActivityAddContactBinding
 import com.example.contactwithroomdb.model.Contact
@@ -23,6 +25,8 @@ class AddContactActivity : AppCompatActivity() {
             if (name.isNotEmpty() && address.isNotEmpty()) {
                 contactDatabase.dao().saveContact(Contact(0, name, lastName, number, address))
                 Toast.makeText(this, "Contact saved!", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, MainActivity::class.java))
+                finishAffinity()
             } else {
                 Toast.makeText(this, "Enter data!", Toast.LENGTH_SHORT).show()
             }

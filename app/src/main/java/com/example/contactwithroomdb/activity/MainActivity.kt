@@ -1,8 +1,9 @@
-package com.example.contactwithroomdb
+package com.example.contactwithroomdb.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.contactwithroomdb.adapter.ContactAdapter
